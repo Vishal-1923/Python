@@ -12,7 +12,7 @@ class Employee():
 
     @classmethod
     def fromStr(cls, nameData):
-        return cls(nameData.split("-")[0], nameData.split("-")[1])
+        return cls(nameData.split("-")[0], nameData.split("-")[1]) #this is returning an instance of class.
 
 e1 = Employee("Vishal", 12000)
 print(e1.name)
