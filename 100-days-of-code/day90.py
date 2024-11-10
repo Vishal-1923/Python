@@ -43,7 +43,7 @@ def fetch_news(topic, from_date, to_date, api_key):
         print("Failed to fetch data:", response.status_code)
 
 # Parameters for fetching news
-topic = "tesla"  # You can change this to any topic of interest
+topic = "cricket"  # You can change this to any topic of interest
 from_date = "2024-10-10"
 to_date = "2024-10-10"
 api_key = "a397f29d5ca74fa1a97181aaa4fe8972"
