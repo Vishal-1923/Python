@@ -33,3 +33,26 @@ Notes:
             pip3 install flask-login <- to use login module of flask
             pip3 install flask-sqlalchemy <- to use databases (ORM for SQL and PostGre SQL, think it of as a "wrapper")
 
+    Creating Flask application:
+        ***
+        from flask import Flask
+
+        def create_app():
+            app = Flask(__name__)
+            app.config['SECRET_KEY'] = 'dcsjndsnd cdnsin'
+            return app
+
+        ***
+        this creates an flask application.
+
+    Runing Flask application:
+        ***
+        from website import create_app
+
+        app = create_app()
+
+        if __name__ == '__main__':
+            app.run(debug=True)
+        ***
+        this will run my flask app. i.e., we will have a runing webserver.
+
