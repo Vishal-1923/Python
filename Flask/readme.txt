@@ -1,0 +1,19 @@
+We are going to make a functional website using Python and Flask(Python's Framework).
+
+Topics:
+1. Sign up an user
+2. Create new user's account
+3. How u store them in a database.
+4. Log into user accounts.
+5. Log out of them.
+6. Associating info with specific user.
+
+Crux:
+We are devloping a very simple yet full of learning, Notes application.
+
+Project Walkaround:
+1. Create an account
+2. Add notes/make new notes.
+3. Delete notes.
+4. Sign out
+5. Sign in any pc to your account, u have yr notes.
