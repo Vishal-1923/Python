@@ -17,3 +17,19 @@ Project Walkaround:
 3. Delete notes.
 4. Sign out
 5. Sign in any pc to your account, u have yr notes.
+
+
+Notes:
+
+    Flask:
+        Flask is a super light-weight framework.
+        It allows us to make website really quickly and easily.
+        Not as powerfull as django neither used as much in production.
+        It is way more simple than django.
+        We can create website way faster.
+
+        Installation:
+            pip3 install flask <- to install flask 
+            pip3 install flask-login <- to use login module of flask
+            pip3 install flask-sqlalchemy <- to use databases (ORM for SQL and PostGre SQL, think it of as a "wrapper")
+
