@@ -1,0 +1,1 @@
+# will store main views or url end points or actual functioning front end aspect of website.
