@@ -1,0 +1,7 @@
+<!-- here, we need to extend the base template (base.html)-->
+
+{% extends "base.html" %} <!-- this html here will be exact copy of base.html and we can over-ride any block which were defined in base.html-->
+
+<!-- following will change the title block.-->
+{% block title %} Changed Home{% endblock %}
+{% block content %} <h1> This is the Home Page. </h1> {% endblock%}

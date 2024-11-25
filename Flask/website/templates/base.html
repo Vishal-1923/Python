@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--head tag to contain meta data related to website.-->
+        <meta charset="utf-8" /> <!--defining char set which we'll be using in this documet.-->
+        <meta name = "viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--now, we will import bootstrap.-->
+        <!-- It is a CSS framework.-->
+        <!-- bootstrap is used for CSS and has many predefined animations, built-in classes, etc...-->
+         <!-- we are providing a link to CDN (Content Delivery Network), will allow u to load without downloading the files. Bunch of CSS and JS-->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            crossorigin="anonymous"
+        />
+
+        <title>
+            {% block title %}<!--used to write a block or some Pythonic Syntax like for loop/if statement. -->
+            Home 
+            {% endblock %}<!--what happens is, whenever child class inherits this base file, it will have access to this block and whatever is written there will replace home.-->
+        </title>
+    </head>
+
+    <body>
+        <!-- body tag contains actual body for the website. or html for body of website.-->
+
+        <!--nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!--this is a bootstrap class.-->
+            <!--adding a button which will allow us to expand nav bar as and when needed.-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"> <!--# means id of something-->
+                 <span class="navbar-toggler-icon">
+                 </span>
+            </button>
+            <!--collapsible navbar-->
+            <div class="collapse navbar-collapse" id = "navbar">
+                <div class = "navbar-nav">
+                    <a class="nav-item nav-link" id="login" href="/login">Login</a>
+                    <a class="nav-item nav-link" id="signup" href="/sign-up">Sign Up</a>
+                    <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+                    <a class="nav-item nav-link" id="home" href="/">Home</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            {% block content %}
+                
+            {% endblock %}
+        </div>
+
+
+        <!--scripts / JS-->
+        <!-- will load JS related to Bootstrap-->
+        <!-- REMEMBER: put scripts at the bottom.-->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <!-- when u want to load JS from static folder, file is index.js-->
+        <!--url_for : a python function which loads url for static folder.-->
+        <script
+            type = "text/javascript"
+            src="{{ url_for('static', filename='index.js') }}"
+        ></script>
+    </body>
+
+</html>

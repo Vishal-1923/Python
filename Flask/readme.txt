@@ -56,3 +56,27 @@ Notes:
         ***
         this will run my flask app. i.e., we will have a runing webserver.
 
+    JINJA templating Language and HTML templates
+        We will put our HTML templates inside templates folder.
+        When we render HTML, we call it a Template.
+        We call it a template because there's a special templating language that u can use with Flask --------> JINJA.
+        This allows us to write a little bit of Python inside of HTML docs.
+        So without JS(JavaScript), we can do bunch of work.
+
+        We define a base template, Theme of website.
+        Now we will over-ride parts of base template with more specific templates.
+            Main content should change as we change the page, rest of the website should remain same.
+        
+        JS
+        -> if u want to write your own JS, u should write or place them in STATIC folder.
+        -> so basically in STATIC folder, all the assets are put there. Or simply things which do not change.
+
+        {{ }}: this means we will be writing some kind of Pythonic expression.
+
+        after defining HTML (base.html), we need to use it via using it in some other html files.
+        then we need to render views.py and for that we will immport render
+
+
+        We can also pass variables and values via Jinja to these templates.
+        Although there are some limitations but we can do most of the things with it.
+        to write an if, we can use {%%} block.
