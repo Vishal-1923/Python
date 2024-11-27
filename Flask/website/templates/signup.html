@@ -1,4 +1,49 @@
 {% extends "base.html" %}
 
 {% block title %} Sign Up {% endblock %}
-{% block content %} <h1> This is sign up. </h1> {% endblock %}
+{% block content %} 
+    <!--POST: when we submit this form, send a POST request to backend-->
+    <form method="POST">
+        <h3 align = "center" > Sign UP </h3>
+        <div class = "form-group"><!--form-group is Bootstrap class-->
+            <label for="email"> Email Address </label>
+            <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name = "email" 
+                placeholder="Enter Email."
+            /> <!--form control is again a bootstrap class-->
+            <!--id is optional but it will link label with input field-->
+            <!--name: attribute will be called by this name when we pass the info in this field to our backend.-->
+            <!--When we submit this form it will bundle up all this info here and willl use name here to represent all this info. -->
+            <!--name should always be same as id.-->
+            <label for="firstName"> First Name </label>
+            <input 
+                type="text" 
+                class="form-control" 
+                id="firstName" 
+                name = "firstName" 
+                placeholder="Enter 1st Name."
+            />
+            <label for="password"> Password </label>
+            <input 
+                type="password" 
+                class="form-control" 
+                id="password" 
+                name = "password" 
+                placeholder="Enter Password."
+            />
+            <label for="confirmPassword"> Confirm Password </label>
+            <input 
+                type="password" 
+                class="form-control" 
+                id="confirmPassword" 
+                name = "confirmPassword" 
+                placeholder="Enter Password again."
+            />
+        </div>
+        <br /> <!--adding a break line to seperate the button-->
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+{% endblock %}

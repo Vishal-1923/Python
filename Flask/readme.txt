@@ -80,3 +80,6 @@ Notes:
         We can also pass variables and values via Jinja to these templates.
         Although there are some limitations but we can do most of the things with it.
         to write an if, we can use {%%} block.
+
+        Sign up Template: actual sign up form 
+        
