@@ -82,4 +82,5 @@ Notes:
         to write an if, we can use {%%} block.
 
         Sign up Template: actual sign up form 
-        
+
+        We r able to use all these bootstrap class is becoz my base template which we r inheriting from has all these links to bootstrap (CSS and JS)
