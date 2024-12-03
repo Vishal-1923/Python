@@ -108,3 +108,7 @@ by default, we accept get request only and if we want post too, we can do that v
 
 Getting info from the form on to the server.
 import request
+
+We can alert user if something is not right and need some attention. We can do this via Message Flashing.
+Just adding flash message will not do anything, we have make some changes in base.html.
+As we r making changes in base.html that means now this functionality is available to everyone 
