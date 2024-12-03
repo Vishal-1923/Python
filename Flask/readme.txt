@@ -85,6 +85,7 @@ Notes:
 
         We r able to use all these bootstrap class is becoz my base template which we r inheriting from has all these links to bootstrap (CSS and JS)
 
+HTTP request
 Right now, if i click on login and signup button, it shows method not allowed.
 
 With websites, we use something called as HTTP -> Hyper Text Transfer Protocol.
@@ -96,3 +97,14 @@ Server needs to interprete that and respond to us or do something based on that 
 -> put request\method
 -> delete 
 -> update
+
+
+Handling POST request
+by doing this we r good to receive post request.
+@auth.route('/login') -> @auth.route('/login', methods=['GET', 'POST'])
+this means ki this root accepts these types of methods -> get and post
+by default, we accept get request only and if we want post too, we can do that via above way.
+ right now, it can only return that page itself.
+
+Getting info from the form on to the server.
+import request
