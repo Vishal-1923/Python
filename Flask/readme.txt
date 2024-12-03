@@ -84,3 +84,15 @@ Notes:
         Sign up Template: actual sign up form 
 
         We r able to use all these bootstrap class is becoz my base template which we r inheriting from has all these links to bootstrap (CSS and JS)
+
+Right now, if i click on login and signup button, it shows method not allowed.
+
+With websites, we use something called as HTTP -> Hyper Text Transfer Protocol.
+There's bunch of method with it,
+-> get request\method
+-> post request\method : some kind of changes in database /to state of website. When we r doing post request, we r posting with all of info present in my form.
+In case of login and signup, we have made method = post thus we r sending a request to the url we r currently on i.e., signup or login that is a post request that has all of info here. So basically it sends all our data to server.
+Server needs to interprete that and respond to us or do something based on that post request 
+-> put request\method
+-> delete 
+-> update
