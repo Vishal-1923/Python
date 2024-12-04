@@ -113,9 +113,18 @@ We can alert user if something is not right and need some attention. We can do t
 Just adding flash message will not do anything, we have make some changes in base.html.
 As we r making changes in base.html that means now this functionality is available to everyone 
 
-Flask sqlalchemy setup
+FLASK SQLALCHEMY SETUP
 will go to init.py file and setup my database 
 1. import sql-alchemy
 2. define and initialize
 3. tell flask that we r using this db and where this is located.
 4. now we need to define some db models/tables, if u want to store something in db, u need to define schema of what that object is going to look like.
+
+DATABASE MODELS
+In models.py file, we'll create db models
+We will create 2 models:
+-> users
+-> notes
+
+By default when we add new object, we dont need to define its ID. It will automatically be set for u.
+
