@@ -128,3 +128,6 @@ We will create 2 models:
 
 By default when we add new object, we dont need to define its ID. It will automatically be set for u.
 
+FOREIGN KEY
+-> when u do foreign key, lower case 
+-> when u do relationship, its Upper case.
