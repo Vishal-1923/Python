@@ -3,9 +3,20 @@
 
 from flask import Flask
 
+#for sql-alchemy setup
+from flask_sqlalchemy import SQLAlchemy
+
+#defining a new database
+db = SQLAlchemy()
+DB_NAME = "database.db"
+
 def create_app():
     app = Flask(__name__) #initialling our app, __name__: represents name of the file / name of the file which ran
     app.config['SECRET_KEY'] = 'dcsjndsnd cdnsin' #to encrypt our application, think of it like a password. It will encrypt/secure cookies and session data related to our website. In production, never ever share this secret key
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'#my sqlite or sql-alchemy database is stored at this location. Basically it will store in Website folder.
+
+    #initialize database by giving it our flask app
+    db.init_app(app) #this database is going to be used for this app.
 
     #here we will register those blueprints. (import)
 
