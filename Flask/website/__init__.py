@@ -2,7 +2,7 @@
 # We can import this folder. whatever is in __init__.py file will run automatically, once we import this folder. 
 
 from flask import Flask
-
+from os import path
 #for sql-alchemy setup
 from flask_sqlalchemy import SQLAlchemy
 
@@ -27,5 +27,17 @@ def create_app():
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
 
+    #we r importing this becoz we need to make sure we load this(models.py) file and it runs and define all those models, before we create or initialize our db.
+    from .models import User, Notes
+
+    create_database(app)
+
     return app
 
+#create db
+def create_database(app):
+    #will check if db exists and if it not then it creates it.
+    if not path.exists('website/' + DB_NAME):
+        with app.app_context():  # Bind the app context
+            db.create_all()  # No need to pass 'app' here
+        print('Created DB!')

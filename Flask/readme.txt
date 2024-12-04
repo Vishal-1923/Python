@@ -131,3 +131,9 @@ By default when we add new object, we dont need to define its ID. It will automa
 FOREIGN KEY
 -> when u do foreign key, lower case 
 -> when u do relationship, its Upper case.
+
+DATABASE CREATION
+We have setup db, define it.
+Now we need to Create it.
+
+In init.py, we need to have a script which checks before we run this server everytime if we have created the db yet.
