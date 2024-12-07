@@ -137,3 +137,16 @@ We have setup db, define it.
 Now we need to Create it.
 
 In init.py, we need to have a script which checks before we run this server everytime if we have created the db yet.
+
+CREATING ACCOUNT 
+We'll now use sign up method to actually create an account.
+
+-> need to import User in auth
+-> need to import    from flask login to hash the password. 
+    hashing is important as we do not want to store password as it is which means if password is apple, then we would not want to store apple in our db, As it adds vulnerability to our DB and security.
+    Hashing function is a function which has no inverse i.e., we cant get to input via output.
+
+    So basically whenever we enter password in web, it goes through a hashing function which generates some hash. So we only check that if the same hash is created or not. 
+    If same hash then OK, otherwise false login.
+    This is so becoz we cant get to input via hash for hashing function.
+    
