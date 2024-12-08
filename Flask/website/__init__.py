@@ -5,6 +5,7 @@ from flask import Flask
 from os import path
 #for sql-alchemy setup
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager #help manage all of log-ing related things.
 
 #defining a new database
 db = SQLAlchemy()
@@ -31,6 +32,15 @@ def create_app():
     from .models import User, Notes
 
     create_database(app)
+    
+    login_manager = LoginManager()
+    login_manager.login_view = 'auth.login' #where do we go if we r not logged in?So should flask redirect us if user is not logged in and there's a log in required.
+    login_manager.init_app(app) #telling login manager which app we r using
+    
+    #function
+    @login_manager.user_loader
+    def load_user(id):
+        return User.query.get(int(id)) #telling flask, how we load a user. User.query.get -> very similar to User.query.filter_by except by default it will look for primary key and check if its equal to what we pass. 
 
     return app
 
