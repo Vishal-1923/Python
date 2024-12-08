@@ -164,3 +164,22 @@ basically change the nav bar to display relevant things.
 We will take use of current_user to detect if a current_user is logged in or not.
 Anything of user model, we can access them via current_user.
 If user is not logged in, it will tell us that this user is anonymous user and is not currently authenticated  becoz we have not signed in.
+
+NOTES HTML
+In Home.html, we will add some sort of UI aspect so that user can add some notes in there.
+
+        <title>
+            {% block title %}<!--used to write a block or some Pythonic Syntax like for loop/if statement. -->
+            Home 
+            {% endblock %}
+            <!--what happens is, whenever child class inherits this base file, it will have access to this block and whatever is written there will replace home.-->
+        </title>
+        if we do like above the comment will be visible but 
+        <title>
+            {% block title %}
+                Home
+            {% endblock %}
+            {# This is a Jinja comment and will not appear in the rendered HTML #} ---> this is JINJA template.
+        </title>
+        if we do this then it will not be visible 
+        list-group is bootstrap class 
