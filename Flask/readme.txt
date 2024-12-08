@@ -149,4 +149,6 @@ We'll now use sign up method to actually create an account.
     So basically whenever we enter password in web, it goes through a hashing function which generates some hash. So we only check that if the same hash is created or not. 
     If same hash then OK, otherwise false login.
     This is so becoz we cant get to input via hash for hashing function.
-    
+
+LOGGING IN USERS
+Now we will make changes in Login block.
