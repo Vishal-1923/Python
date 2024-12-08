@@ -152,3 +152,8 @@ We'll now use sign up method to actually create an account.
 
 LOGGING IN USERS
 Now we will make changes in Login block.
+
+FLASK LOG IN MODULE
+This is the reason why in our model.py file we have USERMIXIN so that we can use this current_user object here to access all of the info about the currently logged in user.
+We need to tell flask in general, how we actually log in a user. How we find a user?
+changes in init.py file.

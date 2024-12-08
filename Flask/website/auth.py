@@ -4,6 +4,8 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_user, login_required, logout_user, current_user
+
 
 auth = Blueprint('auth', __name__)
 
@@ -24,6 +26,7 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in Successfully!!!', category='success') 
+                login_user(user, remember=True) #Until user clears the browser cache or restart the flask server, flask will remember that this user has been logged in. So it does not require the login every time.
                 return redirect(url_for('views.home')) 
             else:
                 flash('Incorrect Password!, Try again!!!', category = 'error')
@@ -35,8 +38,13 @@ def login():
     return render_template("login.html", text="testing", boolean = True)
 
 @auth.route('/logout')
+# adding a new decorator
+@login_required #this will ensure that this page will only be accessible if user has been logged in.
 def logout():
-    return "<p> logout </p>"
+    
+    # return "<p> logout </p>"
+    logout_user() #we dont need to provide user, it will log-out current user.
+    return redirect(url_for('auth.login')) #redirect them to login page
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
@@ -68,6 +76,7 @@ def sign_up():
             # adding user to db
             db.session.add(new_user)
             db.session.commit() #Hey, we have made some changes to db, update it.
+            login_user(new_user, remember=True)
             flash('Account created. ', category='success')
             # re-direct user to home page!
             return redirect(url_for('views.home')) #same as saying url_for('/')
