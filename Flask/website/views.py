@@ -16,7 +16,7 @@ views = Blueprint('views', __name__) #we have setup blueprint for our flask app.
 def home():
     # return "<h1> Test </h1>"
     # as now we have template ready so
-    return render_template("home.html")
+    return render_template("home.html", user= current_user) #will pass current user to home page. basically in our template we will be able to reference this current user and check if its authenticated 
 
 # now we have defined our blueprints. We now need to register these blueprints inside our .init file.
 

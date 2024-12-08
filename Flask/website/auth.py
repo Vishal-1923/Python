@@ -35,7 +35,7 @@ def login():
             return redirect(url_for('auth.sign_up'))
     
     
-    return render_template("login.html", text="testing", boolean = True)
+    return render_template("login.html", text="testing", user=current_user)
 
 @auth.route('/logout')
 # adding a new decorator
@@ -82,4 +82,4 @@ def sign_up():
             return redirect(url_for('views.home')) #same as saying url_for('/')
 
     
-    return render_template("signup.html")
+    return render_template("signup.html", user = current_user)

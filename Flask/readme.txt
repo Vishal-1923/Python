@@ -157,3 +157,10 @@ FLASK LOG IN MODULE
 This is the reason why in our model.py file we have USERMIXIN so that we can use this current_user object here to access all of the info about the currently logged in user.
 We need to tell flask in general, how we actually log in a user. How we find a user?
 changes in init.py file.
+Flask login -> manages what pages we can access and what not. and stores the fact that user is logged in or not.
+
+CHECKING IF USER IS LOGGED IN
+basically change the nav bar to display relevant things.
+We will take use of current_user to detect if a current_user is logged in or not.
+Anything of user model, we can access them via current_user.
+If user is not logged in, it will tell us that this user is anonymous user and is not currently authenticated  becoz we have not signed in.
