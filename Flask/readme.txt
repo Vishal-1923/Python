@@ -183,3 +183,5 @@ In Home.html, we will add some sort of UI aspect so that user can add some notes
         </title>
         if we do this then it will not be visible 
         list-group is bootstrap class 
+
+ADDING USER NOTES 

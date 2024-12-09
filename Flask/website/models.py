@@ -11,7 +11,7 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key = True) #id is primary key.
     
     email = db.Column(db.String(150), unique=True) #here 150 is max length of that string. Unique means no user can have same email as another user.
-    password = db.Column(db.String(150))
+    password = db.Column(db.String(150), nullable=False)
     first_name = db.Column(db.String(150))
     
     #we want that all users can find all of their notes
