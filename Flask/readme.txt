@@ -185,3 +185,11 @@ In Home.html, we will add some sort of UI aspect so that user can add some notes
         list-group is bootstrap class 
 
 ADDING USER NOTES 
+
+DELETING USER NOTES
+adding a button to all our notes to delete it. 
+
+onClick="xyz()" is a JS function.
+As we r not submitting form data upon clicking but instead when we press the button
+we wanna send request to backend. This is standard way to do this.
+So this JS function will send this request to backend for us.

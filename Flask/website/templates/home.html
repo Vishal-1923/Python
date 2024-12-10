@@ -16,7 +16,11 @@
     <ul class="list-group list-group-flush" id="notes">
         {% for note in user.notes%}
             {#display notes data #}
-            <li class="list-group-item"> {{ note.data }} </li>
+            <li class="list-group-item"> {{ note.data }} 
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})"> {# basically we need a way to figure out which note we r on when we click on delete. Thus we r passing noteid. This way we will always have info about current note.#}
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
         {% endfor %}
     </ul>
     <form method="POST">
