@@ -1,0 +1,21 @@
+Python is a web devlopment Framework.
+Often refered as Micro Framework becoz it's very simple and minimilistic.
+
+We'll create a virtual environment becoz we want to have an isolated project where we only have project related packages and package versions.
+Major advantage of it is: the convinience to create a requirements.txt file, to deploy as well as containerize.
+
+ To create a virtual environment:
+ -> python3 -m venv <name of virtual env directory>
+ 
+ We need to configure VS Code, 
+ 
+ to activate virtual env
+ source .venv/bin/activate
+ 
+ to check if this is working:
+ pip3 freeze -> will list down all the installed packages
+ install flask
+ 
+ to make a requirements file
+ pip3 freeze > requirements.txt
+ pip3 install -r requirements.txt : to install all those packages
