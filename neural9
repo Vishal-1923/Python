@@ -19,3 +19,63 @@ Major advantage of it is: the convinience to create a requirements.txt file, to 
  to make a requirements file
  pip3 freeze > requirements.txt
  pip3 install -r requirements.txt : to install all those packages
+ 
+ 
+ 
+ ------------------------------------------------------------------------------------------------
+ Routes, handling diff types of URL - dynamic urls,URL parameters, diff types of requests - post, get, put, etc..., return custom status codes
+ 
+ -> every route starts with a / indicating root or default endpoint.
+ 
+ @app.route('/hello') -> routes like this is static they will always be there
+ what we can do is, we can add some url processors: variables in URL itself that i can handle in function.
+ 
+ There is something known as URL processors, which basically means that parameters provided in URL can be taken care of or they can be processed.
+ This is implemented via Dynamic URL Placeholder <>.
+ 
+ URL Parameters
+ they r handled via request module of python.
+ http://127.0.0.1:5555/handle_url_params?name=Vishal : ? use for giving URL Parameters 
+ http://127.0.0.1:5555/handle_url_params?name=Vishal&greeting=Hello for giving another parameter we use &
+ 
+ if any 1 of the given param is missing, server will give Bad Request Key Error
+ 
+ Handling diff kinds of requests
+ bydefault everything is GET
+ 
+ curl: used for sending the request (GET Request)
+ curl http://127.0.0.1:5555/hello -> return the response or print the response
+ 
+ specifying the method : -X 
+ curl -X POST http://127.0.0.1:5555/hello : now it sends a POST request.
+ 
+ 
+ @app.route('/hello', methods=['GET']) -> by default its like this
+ basically we can give all the methods which we r supporting for this endpoint
+ 
+ @app.route('/hello', methods=['GET', 'POST']) : for supporting both
+ 
+ differentiating between request methods
+     if request.method == 'GET':
+
+ 
+ 
+ returning Status Codes 
+ curl -I http://127.0.0.1:5555/hello -> to get response header, willl also show statuc codes.
+ 
+ @app.route('/hellow')
+def helloWorld():
+    return 'hello world', 206 -> 1 way to return status code
+    
+
+we can also make custom response via make_response module of python.
+@app.route('/hellow')
+def helloWorld():
+    response = make_response() // put my content here response = make_response('hello')
+    response.status_code = 201
+    response.headers['content-type'] = 'application/octet-stream' 
+    return response
+    
+    
+  
+ 
