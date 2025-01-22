@@ -79,3 +79,28 @@ def helloWorld():
     
   
  
+Part - 3 Templates and HTML
+rendering html files,
+work with templates,
+how to redirect,
+dynamically get the URLs for specific end points and how to work with Jinja 2 templating engine,
+how to use filter,
+creating custom filters.
+
+for this tutorial, i have used app3.py 
+
+if i want to return an HTML file and not display any text, i need to use render_template method.
+
+We can dynamically change what is happening in html file
+
+
+what we can also do is inheriting template 
+extends
+block
+
+filters in Jinja
+there r many built in but we can make some of ours too.
+
+dynamic url: how to get url of an endpoint dynamically without having to specify statically
+
+suppose i want to have a link to endpoint filter on index.

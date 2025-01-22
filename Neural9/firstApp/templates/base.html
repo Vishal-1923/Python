@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Default Value {% endblock %}</title> <!--this will be dynamic for those pages which will inherit it. There is also a default value which will be displayed if nothing is provided.-->
+</head>
+<body>
+    {% block content %}
+
+    {% endblock  %}
+
+</body>
+</html>
+
+<!-- this is basic template which will be inherited by every other page. They will modify as per need-->
+<!-- The only modifiable thing here is content and title rest everything will be same.-->
+<!-- Where ever required, i'll just extend from it.-->
