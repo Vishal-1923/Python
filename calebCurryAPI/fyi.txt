@@ -1,0 +1,32 @@
+This is part of Caleb Curry's tutorial for API.
+
+Right now, we r trying to consume 'Stack Overflow' API.
+
+We can get access to all stack overflow questions via the their api. So we'll use that for our understanding...
+
+go to api.stackexchange.com
+go to documentation.
+go to questions under questions category.
+
+/2.3/questions?order=desc&sort=activity&site=stackoverflow --> this is the api endpoint for questions.
+observation: there are some query parameters involved like order, sort.
+
+if u wanna see the actual result just copy this and paste it over the url space and write it after stackexchange.com
+like this: https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow
+this will show u all the questions.
+
+in order to work with api, use a tool named "POSTMAN", as it provides heck load of features....
+just put the url in url's place and hit send with GET attribute and ta-da, u will see the request. This request is in form of JSON.
+
+Now we will make our own app just to consume this api.
+
+when u just print response via print(response) --> u will get <Response [200]>  which basically means ok. 200 is a response status code.
+to see data, just add .json() to it.
+we can iterate over all the lists of questions and even grab something more specifically like :
+for question in response.json()['items']:
+    print(question)
+    print()
+
+this is how u can consume an api and so your customization as per your need...
+
+
