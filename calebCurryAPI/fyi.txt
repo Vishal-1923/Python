@@ -29,4 +29,50 @@ for question in response.json()['items']:
 
 this is how u can consume an api and so your customization as per your need...
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This is for my own API use:
+1. setup virtual environment
+cmd : python3 -m venv .venv  <---------- will create a virtual environment
+cmd : source .venv/bin/activate <------- will activate this virtual environment.
+creating and working on a virtual env is a good practice when u wanna seperate out the dependencies of your project when compared to global level.
+
+2. installing dependencies
+cmd : pip3 install flask <-------------------- will download the flask
+cmd : pip3 install flask-sqlalchemy <--------- will download the ORM - Object Relation Maping 
+cmd : pip3 freeze > requirements.txt <-------- will create a file which will contain all the requirements i.e., dependencies.
+
+3. will create a basic flask application
+from flask import Flask
+app = Flask(__name__)
+-> these 2 line sets up flask.
+
+route is nothing but an endpoint.
+
+in order to run my application.py file, I need to set up some environment variables, they are:
+-> export FLASK_APP=application.py
+-> export FLASK_ENV=devlopment
+-> flask run
+this is required everytime i open my terminal i.e., as soon as i close my terminal, these settings get away.
+i think this is some another way to execute .py becoz in earlier tutorials this was not required. -----------> ask rishu or search!!!!!!
+
+now we will learn to do a GET request.
+can be simply done like this:
+@app.route('/drinks')
+def get_drinks():
+	return {"drinks" : "drink data"}
+
+now lets connect it to a db.
+in order to connect to a db, we have to define all of the things we want to store in our db as models, so we r going to create a class
+
+
+now we will setup db with a table for drinks ------- easiest way is Python terminal
+to create a table -> db.create_all()
+
+
+we have our db ready, now what we have to do is do GET, POST, DELETE things
+
+for post use postman :)
+
+now deletion
 
