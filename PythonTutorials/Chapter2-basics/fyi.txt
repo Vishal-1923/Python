@@ -1,0 +1,17 @@
+Open Terminal in VS Code
+1. click on terminal and then new terminal option present in menu.
+2. cltrl + `
+
+Discussed about 
+variable,
+variable naming convention
+expressions : 2+2 vs statements : perform operations on values --> myName = "vishal"
+
+Comment is note for ourselves or for others placed inside a file.
+starts with # 
+Comment does not impact code hence are not processed.
+
+Indentation in Python:
+    they matter the most in Python. and have special meaning 
+
+Ctrl + , ------> will open settings on vs code 
