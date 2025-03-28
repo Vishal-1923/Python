@@ -1,0 +1,40 @@
+Why should anyone be learning python?
+->easy to learn and use
+->versatility - basically used in wide range of app.
+->large and active community
+->Good for rapid prototyping
+->Job Opportunities
+
+Install Python
+
+Install VS Code (code editor)
+
+Command Pallette : ctrl + shift + P
+
+Open Existing Terminal : ctrl + `
+
+New Terminal : ctrl + shift + `
+
+python version : python3 --version
+
+Python repl or Interactive Python shell : python3
+repl -> Read Evaluate Print Loop
+
+to exit/quit from here : exit() or quit()
+
+Python is not a low level language - more machine oriented
+Python is a high level language, uses INTERPRETER
+Python is more user friendly to read/write.
+
+close the terminal window: 
+1. close icon click : data will be there 
+2. click on delete icon : sb ud jaaega pura nya khulega
+
+creating file:
+1. click on file icon
+2. ctrl + n
+
+runing file
+1. trianlge icon on top right -> run python file
+2. python3 file.py
+3. right click on file -> run python file in terminal
