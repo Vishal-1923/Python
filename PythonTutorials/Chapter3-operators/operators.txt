@@ -1,0 +1,32 @@
+statement -> opertion on a value
+
+operators -> symbols used to perform operations on values and variables that hold those values.
+
+1. assignment operator: just assign RHS to LHS
+
+2. arithmetic operators 
+    2.1 addition        (+)     NOTE: also used for concatenating 2 strings
+    2.2 subtraction     (-)
+    2.3 multiplication  (*)
+    2.4 division        (/) -> decimal 5/3 = 1.6
+    2.5 floor division  (//)  5/3 = 1
+    2.6 round division  (round(a/b))  5/3 = 2
+    2.7 exponent        (**)  5 ** 2 = 25
+
+3. comparision operators
+    3.1 == : returns False/True ----> boolean data
+    3.2 !=
+    3.3 >
+    3.4 <
+    3.5 >=
+    3.6 <=
+
+4. Boolean operator
+    4.1 not : negates the value.
+    4.2 and : if both true then true otherwise false.
+    4.3 or  : if anyone is true then true and if both false then false.
+
+5. Ternary operator
+    a condition b ? a : b  ----> if condition is True then a otherwise b
+
+6. Ternary statement - uses Ternary operator
