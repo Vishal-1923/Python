@@ -1,0 +1,19 @@
+Naming Convention for files
+->all lower case and join words with _ : data_types.py
+
+String Data Type
+
+Literal Assignment of values: uses =
+
+There is another way to assign values i.e., via constructor functions.
+Thus, in total 2 ways are there to assign values.
+
+Concatenation: adding 2 string together to make a single string.
+
+Casting a no to a string
+
+In order to concatenate, a no to a string, first it must be casted to string.
+
+String Methods
+- methods r functions which are called on string class.
+- we can call string methods directly to value itself.
