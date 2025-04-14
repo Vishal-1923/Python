@@ -100,3 +100,42 @@ print(type(x))
 print(isinstance(myVal, bool))
 
 #Numeric Data Types
+
+# Integer
+price = 100
+best_price = int(80)
+print(type(price))
+print(isinstance(best_price, int))
+
+#Float
+gpa = 4.12
+cgpa = float(9.9)
+print(type(gpa))
+print(isinstance(cgpa, float))
+
+#complex Value
+comp_val = 5+3j
+print(type(comp_val))
+print((comp_val).real)
+print((comp_val).imag)
+
+# Built-in Functions for no
+print(abs(gpa))
+print(abs(gpa * -1))
+print(round(gpa))#will round to nearest int
+print(round(gpa, 1)) #will round to neares 1st decimal posn.
+
+# These r some of many built in functions which does not neeed modules.
+# math module although provide wide range of functions...  
+import math
+print(math.pi)
+print(math.sqrt(90))
+print(math.ceil(gpa))
+print(math.floor(gpa))
+
+#casting string to a no
+zipcode = "110059"
+print(type(int(zipcode)))
+
+zipcode = "vishal"
+print(type(int(zipcode))) #will give error : invalid literal for int()
