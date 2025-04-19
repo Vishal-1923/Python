@@ -1,0 +1,3 @@
+Alt + z ---> wrap contents on same screen.
+
+in order to exit from the code flow, use sys.exit
