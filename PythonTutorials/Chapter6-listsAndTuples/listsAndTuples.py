@@ -215,3 +215,46 @@ print(rest) #holds last.
 
 # COUNT
 print(anotherTuple.count(5))
+
+# Tuple is immutable i.e., values will not change. This will give error -> tuple object does not support item assignment.
+# anotherTuple[0] = 100
+# anotherTuple.append(3) --> no method append as we cant change tuple
+
+# This is so becoz tuples were designed to remain constant i.e., once created there items will remain as it is.
+# ORDER matters.
+t1 = (1, 2, 3)
+t2 = (3, 2, 1)
+# are considered diff.
+print(t1 == t2)
+
+# this is true even for lists
+t1 = [1, 2, 3]
+t2 = [3, 2, 1]
+print(t1==t2) #will print false.
+
+# we can have tuple/list inside tuple
+# and list/tuple inside list.
+t3 = (1, 2, t2, [1,2,3])
+t4 = [1, 2, t1, [4,5,6]]
+# 1 imp thing, if there is a list inside a tuple then that list is mutable but tuple's structure remains same.
+
+# List -----> whiteboard (temperory)
+# Tuple ----> Stone Carving (permanent)
+
+# But why 2 things???
+# 1. Mutability:
+#       modification(update, delete, add)
+# 2. Performance
+#       tuples r faster, as it is permanent, memory and access speed optimizations r done.
+# 3. Safety
+#       accidential modification
+# 4. Hashability
+#       can be used as keys in dictionary / ele in sets as they r immutable
+#       list cant as they r mutable
+
+# List []
+# Tuple ()
+# both r ordered.
+
+# Faster execution
+# Less memory - list keeps some extra slot in case of modifications but no such things r required in tuple
