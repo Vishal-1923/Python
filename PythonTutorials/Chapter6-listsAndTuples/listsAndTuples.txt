@@ -1,0 +1,4 @@
+Lists are 1 of 4 collection data types in Python. 
+They hold multiple values and then we can reference those values with a common name.
+
+Lists start with 0 index.
