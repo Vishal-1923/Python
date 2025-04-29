@@ -172,5 +172,5 @@ print(set3)
 set1.difference_update(set2) #removes common ele from original set.
 print(set1)
 
-set1.symmetric_difference_update(set2) #keeps only that ele which r in either of set.
+set1.symmetric_difference_update(set2) #keeps only that ele which r in either of set. basically removes any duplicate.
 print(set1)
