@@ -43,3 +43,7 @@ from rps7 import rock_paper_scissors
 rock_paper_scissors()
 
 sys.exit() #used to exit the program...
+
+
+
+# actually function runs automatially when module is imported becoz python actually runs the file when it is importing that file. this is python way of doing....
