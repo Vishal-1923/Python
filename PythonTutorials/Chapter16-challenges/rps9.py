@@ -77,9 +77,8 @@ def rps(name="PlayerOne"): #we have set default value so that just in case when 
         else:
             print("\n🎉🎉🎉🎉")
             print(f"Thank you for playing {name}!\n")
-            sys.exit(f"Bye {name}! 👋")
 
-    return play_rps #willl create "closure..."
+    return play_rps #willl create "closure..." #agr maine () ye lga dia function name k baad to python sidha use execute kr dega aur closure ni bn paaega basically ye execute krne p NULL de dega and phir jb hm bahar s jis function ko call krenge w kr ni paaega call ise.
 
 
 

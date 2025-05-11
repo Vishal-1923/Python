@@ -6,13 +6,13 @@
 # *********************************************************************************************************
 import sys
 from chapter16_challenges import guess_my_num
+from rps9 import rps
 
 def game_selector(choice, name):
     if choice == 1:
         print(f"\nHang on {name}, taking you to \"Rock-Paper-Scissors game\". \n")
-        run_game = guess_my_num(name)
+        run_game = rps(name)
         run_game()
-        
     elif choice == 2:
         print(f"\nHang on {name}, taking you to \"Guess Number\" game. \n")
         run_game = guess_my_num(name)
@@ -30,6 +30,7 @@ def start(name):
     while(True):
         if playerChoice not in [1, 2]:
             print(f"{name}, you have enter wrong choice, please choose from [1, 2]. \n")
+            start(name)
         else:
             game_selector(playerChoice, name)
             break
@@ -42,7 +43,7 @@ def start(name):
         else:
             break
     
-    if play_again == "y":
+    if play_again.lower() == "y":
         start(name)
     else:
         print("\n🎉🎉🎉🎉")
