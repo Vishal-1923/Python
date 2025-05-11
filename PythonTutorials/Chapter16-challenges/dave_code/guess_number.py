@@ -63,7 +63,7 @@ def guess_number(name='PlayerOne'):
         else:
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
-            if __name__ == "__main__":
+            if __name__ == "__main__": #this part is imp for this file to run as a seperate module too.
                 sys.exit(f"Bye {name}! 👋")
             else:
                 return
