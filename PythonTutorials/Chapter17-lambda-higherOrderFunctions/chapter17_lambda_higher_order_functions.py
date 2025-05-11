@@ -84,4 +84,8 @@ print(sum(numbers, 20))
 # another example for reduce.
 names = ['Dave', 'Gray', 'Python']
 total_char = reduce(lambda acc, curr : acc + len(curr), names, 0) #here starting number is necessary as we r originally dealing with char... this error will come - TypeError: can only concatenate str (not "int") to str
+# basically reduce things this as string and will think of adding int to it thus we give 0 or starting num.
+
+# phir bhi ise thoda dekh lio dngh s ise....
+
 print(total_char)
