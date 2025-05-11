@@ -7,7 +7,9 @@ import sys
 def start(name):
     print(f"Welcome {name}, in the Game of \"Guess my Number\"")
 
-def guess_my_num(name):
+def guess_my_num(name="PlayerOne"):
+    start(name)
+    
     player_wins = 0
     python_wins = 0
     game_count = 0
@@ -68,7 +70,6 @@ def guess_my_num(name):
         else:
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
-            sys.exit(f"Bye {name}! 👋")
         
     return play_guess_my_num
             
