@@ -1,0 +1,26 @@
+<!-- This is the homepage which everyone sees when they load our webapp. -->
+
+<!-- emmet abbriviation : ! and tab  : this will load the boilerplate -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City not found!!!</title>
+
+    <!-- linking css, this is very much specific for Flask -->
+    <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+    <!-- this is what flask will use to insert the values here as it is a template(we will be inserting values into this file when it is called.) -->
+</head>
+<body>
+    <h1>City not found!!!</h1>
+    <h2>Try Again?</h2>
+    <!-- when we post data from form, it should go to weather page. -->
+    <form action="/weather">
+        <input type="text" name="city" id="city" placeholder="Enter a City" />
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
